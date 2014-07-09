@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %} {{producto.nombre}} {% endblock %}
+
+{% block content %}
+
+<h1>{{ producto.nombre }} </h1>
+<img src="/media/{{ producto.imagen }}" width="150px" height="150px">
+</br>
+<p> Descripción: {{producto.descripcion}} </p>
+<p> Precio: {{producto.precio}} </p>
+<p> Cantidad en Existencia: {{producto.stock}} </p>
+<a href="/productos/">Regresar al Listado</a>
+{% endblock %}

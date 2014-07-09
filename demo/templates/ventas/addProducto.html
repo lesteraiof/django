@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %} Nuevo Productos {% endblock %}
+
+{% block content %}
+	<h1>Nuevo producto</h1>
+	<form action="." method="POST" enctype="multipart/form-data">
+		{%csrf_token%}
+		{{form.as_p}}
+		<input class="btn btn-primary" type="submit" value="Grabar">
+		<input class="btn btn-secondary" type="reset" value="Resetear">
+	</form>
+
+	<br>
+
+	{{informacion}}
+	<br>
+	<br>
+	<a href="/productos/page/1">Regresar a Listado de Productos</a>
+
+{% endblock %}
